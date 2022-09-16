@@ -9,6 +9,8 @@ L5 = []
 Loop1 = 1
 Loop2 = 1
 Loop3 = 1
+Loop4 = 1
+A = 1
 
 def placemap(x,y,e):
     if y == 1:
@@ -38,5 +40,9 @@ while Loop1 != 5:
     while Loop3 != B:
         placemap(Loop1,A+Loop3,1)
         Loop3 = Loop3+1
+    C = A+B
+    while Loop4 != 5-C:
+        placemap(Loop1,A+B+Loop4,0)
+        Loop4 = Loop4+1
     Loop1 = Loop1+1
 printmap()
