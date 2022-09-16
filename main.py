@@ -11,6 +11,8 @@ Loop2 = 1
 Loop3 = 1
 Loop4 = 1
 A = 1
+B = 1
+C = 1
 
 def placemap(x,y,e):
     if y == 1:
