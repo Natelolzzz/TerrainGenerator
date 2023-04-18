@@ -1,50 +1,53 @@
-import random
+from random import randint
 
-L1 = []
-L2 = []
-L3 = []
-L4 = []
-L5 = []
+L1 = ['','','','','']
+L2 = ['','','','','']
+L3 = ['','','','','']
+L4 = ['','','','','']
+L5 = ['','','','','']
+Y = 3
+Loops = 0
 
-Loop1 = 1
-Loop2 = 1
-Loop3 = 1
-Loop4 = 1
-A = 1
-B = 1
-C = 1
+for X in range(5):
+  Y = randint(Y-1,Y+1)
+  if Y < 1:
+    Y = 1
+  elif Y > 5:
+    Y = 5
+  if Y == 1:
+    L1[Loops] = " "
+    L2[Loops] = " "
+    L3[Loops] = " "
+    L4[Loops] = " "
+    L5[Loops] = "_"
+  elif Y == 2:
+    L1[Loops] = " "
+    L2[Loops] = " "
+    L3[Loops] = " "
+    L4[Loops] = "_"
+    L5[Loops] = "*"
+  elif Y == 3:
+    L1[Loops] = " "
+    L2[Loops] = " "
+    L3[Loops] = "_"
+    L4[Loops] = "*"
+    L5[Loops] = "*"
+  elif Y == 4:
+    L1[Loops] = " "
+    L2[Loops] = "_"
+    L3[Loops] = "*"
+    L4[Loops] = "*"
+    L5[Loops] = "*"
+  elif Y == 5:
+    L1[Loops] = "_"
+    L2[Loops] = "*"
+    L3[Loops] = "*"
+    L4[Loops] = "*"
+    L5[Loops] = "*"
 
-def placemap(x,y,e):
-    if y == 1:
-        L5.insert(x, e)
-    if y == 2:
-        L4.insert(x, e)
-    if y == 3:
-        L3.insert(x, e)
-    if y == 4:
-        L2.insert(x, e)
-    if y == 5:
-        L1.insert(x, e)  
-
-def printmap():
-    print(' '.join(str(e) for e in L1))
-    print(' '.join(str(e) for e in L2))
-    print(' '.join(str(e) for e in L3))
-    print(' '.join(str(e) for e in L4))
-    print(' '.join(str(e) for e in L5))
-
-while Loop1 != 5:
-    A = random.randint(0, 3) 
-    while Loop2 != A:
-        placemap(Loop1,Loop2,2)
-        loop2 = Loop2+1
-    B = random.randint(1, 2)
-    while Loop3 != B:
-        placemap(Loop1,A+Loop3,1)
-        Loop3 = Loop3+1
-    C = A+B
-    while Loop4 != 5-C:
-        placemap(Loop1,A+B+Loop4,0)
-        Loop4 = Loop4+1
-    Loop1 = Loop1+1
-printmap()
+  Loops += 1
+print(L1)
+print(L2)
+print(L3)
+print(L4)
+print(L5)
