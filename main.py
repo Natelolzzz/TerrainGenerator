@@ -1,7 +1,7 @@
 from random import randint
 import sys, time, random
 
-typing_speed = 200  #wpm
+typing_speed = 1000  #wpm
 legnth = int(input("> "))
 
 def print_slow(str):
