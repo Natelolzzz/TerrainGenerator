@@ -2,7 +2,7 @@ from random import randint
 import sys, time, random
 
 typing_speed = 200  #wpm
-legnth = input("> ")
+legnth = int(input("> "))
 
 def print_slow(str):
   for letter in str:
